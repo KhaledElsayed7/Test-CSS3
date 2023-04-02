@@ -1,0 +1,257 @@
+body{
+    perspective:600px;
+   
+}
+
+.father{
+    width:300px;
+    height:300px;
+    margin: 50px auto;
+    position:relative;
+    transition:all .54s ease-in-out;
+    transform-style: preserve-3d;
+    
+}
+.father:hover{
+    transform:rotateY(180deg);
+}
+.father > div{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    line-height:300px;
+    color:#FFF;
+    font-size:30px;
+    text-align:center;
+    
+}
+.front{
+    z-index:2;
+    background-color:#F00; 
+    backface-visibility: hidden; 
+   
+}
+.back{
+    z-index:1;
+    background-color:#00F;
+    backface-visibility: hidden;
+    transform:rotateY(180deg);
+   
+}
+.background-size{
+    width:700px;
+    height:800px;
+    margin: 50px auto;
+    background:url('messi.jpg');
+    border:5px dotted #F00;
+    background-size:100% 100%;
+    color:#FFF;
+    font-size:30px;
+    text-align:center;
+}
+.transform-origin{
+    width:500px;
+    height:500px;
+    margin: 50px auto;
+    background-color:#F00;
+    transform-style: preserve-3d;
+    transition:all.54s ease-in-out;
+    transform-origin:;
+}
+.transform-origin:hover{
+    transform:rotateZ(360deg);
+}
+
+.circle{
+    width:500px;
+    height:500px;
+    line-height:400px;
+    text-align:center;
+    margin: 50px auto;
+    background-color:#F00;
+    border:20px solid #F00;
+    border-radius:50%;
+    transform-style: preserve-3d;
+    transition: all .5s ease-in-out ;
+}
+.circle:hover{
+    border-radius:50%;
+    background-color: #FF0;   
+}
+div p{
+    width:80px;
+    height:20px;
+    background-color:#F00;
+    margin:15px;
+    margin-bottom:20px;
+    padding:15px;
+    transform-style:preserve-3d;
+    transition-property:width ;
+    transition-duration:.5s;
+    transition-delay:3s;
+    transition-timing-function:ease;
+}
+div p:first-of-type{
+      transition-delay:.5s;
+}
+div p:nth-of-type(2){
+     transition-delay:1s;
+}
+div p:nth-of-type(3){
+     transition-delay:1.5s;
+}
+div p:nth-of-type(4){
+      transition-delay:2s;
+}
+div p:last-of-type{
+      transition-delay:2.5s;
+}
+div:hover p{
+    width:200px;
+}
+
+.transition{
+    width:150px;
+    height:80px;
+    margin:20px ;
+    padding:20px;
+    padding-left:70px;
+    line-height:90px;
+    background-color:#FF0;
+    color:lightgreen;
+    transition: all 1.5s ease-in-out ;
+    transition-delay: .5s, .5s, 1.5s;
+}
+.transition:hover{
+    width:200px;
+    height:100px;
+    background-color:#F00;
+    
+}
+.column{
+    padding:15px;
+    margin:15px;
+   -webkit-column-count:3;
+    column-count:3;
+    -webkit-column-Gap:50px;
+    column-Gap:50px;
+    -webkit-column-rule:5px dashed #0F0;
+    -column-rule:5px dashed #0F0;
+    
+}
+.column h2{
+        -webkit-column-span:all;
+        -moz-column-span:all;
+        column-span:all;
+}
+.animation{
+   width:100px;
+   height:100px;
+   padding:10px;
+   margin:10px;
+   background-color:#F00;
+   position:absolute;
+   -webkit-animation:moving 5s 5 ease-in-out;
+   animation:moving 5s 5 ease-in-out;
+   animation-iteration-count:5;
+   animation-direction:reverse;
+   animation-delay:0s;
+   
+}
+@-webkit-keyframes moving{
+   0%{
+      top:0px;
+      left:0px;
+   }
+   25%{
+      top:0px;
+      left:200px;
+   }
+   50%{
+      top:200px;
+      left:200px;
+   }
+   75%{
+      top:200px;
+      left:0px;
+   }
+   100%{
+      top:0px;
+      left:0px;
+   }
+}
+@-moz-keyframes moving{
+   0%{
+      top:0px;
+      left:0px;
+   }
+   25%{
+      top:0px;
+      left:200px;
+   }
+   50%{
+      top:200px;
+      left:200px;
+   
+   }
+   75%{
+      top:200px;
+      left:0px;
+   }
+   100%{
+      top:0px;
+      left:0px;
+   }
+}
+
+@keyframes moving{
+   0%{
+      top:0px;
+      left:0px;
+   }
+   25%{
+      top:0px;
+      left:200px;
+   }
+   50%{
+      top:200px;
+      left:200px;
+
+   }
+   75%{
+      top:200px;
+      left:0px;
+   }
+   100%{
+      top:0px;
+      left:0px;
+   }
+}
+
+/* Selectors*/
+p ~ h3{
+   font-style: italic;
+   color: orange;
+}
+[class^="o"]{
+   color: red;
+}
+[class$="r"]{
+   color: green;
+}
+[class*="x"]{
+   color: blue;
+}
+.selector-2{
+margin: 15px;
+padding: 15px;
+}
+:disabled{
+   background-color: yellow;
+}
+
+
+
+
